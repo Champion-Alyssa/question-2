@@ -67,7 +67,7 @@ function grayScale(pathIn, pathOut) {
   var fs = require("fs"),
     PNG = require("pngjs").PNG;
   //   array.forEach((element) => {});
-    console.log(pathIn)
+  //  console.log(pathIn)
 
   pathIn.forEach((file, index) => {
     // console.log("next one");
@@ -82,11 +82,11 @@ function grayScale(pathIn, pathOut) {
           for (var x = 0; x < this.width; x++) {
             var idx = (this.width * y + x) << 2;
 
-            let gray =
+            let blackWhite =
               (this.data[idx] + this.data[idx + 1] + this.data[idx + 2]) / 3;
-            this.data[idx] = gray;
-            this.data[idx + 1] = gray;
-            this.data[idx + 2] = gray;
+            this.data[idx] = blackWhite;
+            this.data[idx + 1] = blackWhite;
+            this.data[idx + 2] = blackWhite;
           }
         }
         this.pack().pipe(
