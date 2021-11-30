@@ -1,10 +1,10 @@
 /*
- * Project:
+ * Project: Question Two
  * File Name: main.js
  * Description:
  *
- * Created Date:
- * Author:
+ * Created Date: 11/30/2021
+ * Author: Alyssa Champion
  *
  */
 
@@ -16,8 +16,5 @@ const IOhandler = require("./IOhandler"),
 
   IOhandler.unzip(zipFilePath, pathUnzipped)
   .then(() => IOhandler.readDir(pathUnzipped))
-  .then((files) => {
-    let randNum = Math.floor(Math.random() * 600);
-    IOhandler.grayScale(files, `${pathProcessed} /${randNum}.png`)})
-  
+  .then((files) => IOhandler.grayScale(files, pathProcessed))
   .catch((err) => console.log(err));

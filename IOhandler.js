@@ -1,5 +1,5 @@
 /*
- * Project: Question 2 - Practice Final Exam
+ * Project: Question 2 
  * File Name: IOhandler.js
  * Description: Collection of functions for files input/output related operations
  *
@@ -49,7 +49,7 @@ const readDir = (dir) => {
           if (ext === ".png") {
             array.push(newPath);
           }
-        } 
+        } resolve(array)
       }
     })
   })
@@ -67,6 +67,7 @@ function grayScale(pathIn, pathOut) {
   var fs = require("fs"),
     PNG = require("pngjs").PNG;
   //   array.forEach((element) => {});
+    console.log(pathIn)
 
   pathIn.forEach((file, index) => {
     // console.log("next one");
